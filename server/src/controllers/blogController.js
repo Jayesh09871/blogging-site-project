@@ -18,5 +18,4 @@ const getPublishedBlogs = async (req, res) => {
 }
 };
 
-
 module.exports = { createBlog, getPublishedBlogs};
