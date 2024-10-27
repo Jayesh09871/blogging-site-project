@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
-
 const blogSchema = new mongoose.Schema(
   {
     title: {
@@ -45,8 +44,6 @@ const blogSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-  },
-  { timestamps: true }
-);
+  }, { timestamp: true } );
 
 module.exports = mongoose.model("blog", blogSchema);
