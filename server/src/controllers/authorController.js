@@ -11,7 +11,6 @@ const createAuthor = async (req, res) => {
 }
 };
  
-
 // login api 
 
 const loginAuthor = async (req, res) => {
@@ -22,7 +21,9 @@ const loginAuthor = async (req, res) => {
     if (!checkCredentials) {
      return res.status(401).send({ status: false, message: "Wrong Credentials" });
     }
-    const token = jwt.sign({authorId: checkCredentials._id.toString(), project1: 1, college: "PST",},"project1" );
+        let token = jwt.sign({authorId: checkCredentials._id.toString(),project: 1,college: "pst",
+      },"project1");
+ 
   return res.status(200).send({status: true,msg: "Token has been generated",token: token,});
   } 
   catch (error) {

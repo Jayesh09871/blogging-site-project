@@ -3,7 +3,7 @@ const router = express.Router();
 
 const { createAuthor, getAuthors , loginAuthor} = require('../controllers/authorController');
 const { createBlog, getPublishedBlogs, updateBlog, deleteBlog } = require('../controllers/blogController');
-
+const middleware = require("../middleware/middleware");
 router.post('/authors', createAuthor);
 router.get('/getauthors', getAuthors);
 

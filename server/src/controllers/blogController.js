@@ -11,7 +11,6 @@ const createBlog = async (req, res) => {
 };
 
 
-
 const getPublishedBlogs = async (req, res) => {
   try {
     const getblogs = await BlogModel.find(req.query);
